@@ -77,7 +77,7 @@ jobs:
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
         run: |
-          if git diff --quiet; then
+          if git diff --quiet && [ -z "$(git status --porcelain --untracked-files=normal)" ]; then
             echo "No gist changes"
             exit 0
           fi
@@ -85,7 +85,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add bioagent-leaderboard.ts bioagent-leaderboard.md bioagent-leaderboard.zh-CN.md latest.json history.json snapshots
+          git add bioagent-leaderboard.ts bioagent-leaderboard.md bioagent-leaderboard.zh-CN.md latest.json history.json
           git commit -m "Update bioagent leaderboard for $(date +%F)"
           git remote set-url origin "https://x-access-token:${GIST_TOKEN}@gist.github.com/${GIST_ID}.git"
           git push origin HEAD:"$(git branch --show-current)"
