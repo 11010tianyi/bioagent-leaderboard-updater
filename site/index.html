@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BioAgent Charts</title>
+    <meta name="description" content="生物信息 / 生物医学 AI Agent GitHub 热度、专业主榜、生态和趋势榜单" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Bioinformatics / Biomedical AI Agents</p>
+        <h1>BioAgent Charts</h1>
+      </div>
+      <nav class="links" aria-label="external links">
+        <a href="https://gist.github.com/11010tianyi/4fc89bce7e5de2f32eb4d4f147c6beef">Gist</a>
+        <a href="https://github.com/11010tianyi/bioagent-leaderboard-updater">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="stats-grid" id="stats"></section>
+
+      <section class="panel chart-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Trend</p>
+            <h2>Stars 趋势</h2>
+          </div>
+          <div class="segmented" id="trend-range" aria-label="trend range">
+            <button class="active" data-days="30">30D</button>
+            <button data-days="90">90D</button>
+            <button data-days="365">1Y</button>
+          </div>
+        </div>
+        <div id="trend-chart" class="trend-chart" aria-label="stars trend chart"></div>
+      </section>
+
+      <section class="split">
+        <div class="panel">
+          <div class="panel-head compact">
+            <div>
+              <p class="eyebrow">Share</p>
+              <h2>类别占比</h2>
+            </div>
+          </div>
+          <div id="category-share" class="category-share"></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head compact">
+            <div>
+              <p class="eyebrow">Growth</p>
+              <h2>增长观察</h2>
+            </div>
+          </div>
+          <div id="growth-list" class="growth-list"></div>
+        </div>
+      </section>
+
+      <section class="panel board-panel">
+        <div class="panel-head board-head">
+          <div>
+            <p class="eyebrow">Leaderboard</p>
+            <h2>项目榜单</h2>
+          </div>
+          <div class="toolbar">
+            <div class="segmented" id="section-tabs" aria-label="leaderboard section">
+              <button class="active" data-section="all">全部</button>
+              <button data-section="core">专业</button>
+              <button data-section="ecosystem">生态</button>
+              <button data-section="benchmark">评测</button>
+              <button data-section="watch">观察</button>
+            </div>
+            <input id="search" type="search" placeholder="搜索项目或 repo" />
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>项目</th>
+                <th>类别</th>
+                <th>Stars</th>
+                <th>30D</th>
+                <th>Forks</th>
+                <th>最后推送</th>
+                <th>定位</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span id="updated-at">更新中</span>
+      <span>Stars 来自 GitHub API，论文和项目分类为人工维护。</span>
+    </footer>
+
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>

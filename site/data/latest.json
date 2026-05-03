@@ -1,0 +1,1155 @@
+{
+  "generatedAt": "2026-05-03T15:05:05.557Z",
+  "generatedDate": "2026-05-03",
+  "generatedDateTime": "2026/05/03 23:05",
+  "timezone": "Asia/Shanghai",
+  "totals": {
+    "projects": 40,
+    "repos": 38,
+    "stars": 29692,
+    "forks": 3767,
+    "coreProjects": 19,
+    "ecosystemProjects": 11,
+    "benchmarkProjects": 6,
+    "watchProjects": 4
+  },
+  "categories": {
+    "direct-agent": {
+      "label": "Direct bioagent",
+      "zhLabel": "专业 BioAgent"
+    },
+    "platform-framework": {
+      "label": "Agent platform/framework",
+      "zhLabel": "Agent 平台/框架"
+    },
+    "skill-library": {
+      "label": "Agent skills library",
+      "zhLabel": "Agent 技能库"
+    },
+    "benchmark-source": {
+      "label": "Benchmark/source",
+      "zhLabel": "Benchmark/资料源"
+    },
+    "adjacent-tool": {
+      "label": "Adjacent bio-AI tool",
+      "zhLabel": "相邻 Bio-AI 工具"
+    },
+    "watchlist": {
+      "label": "Emerging/watchlist",
+      "zhLabel": "候选观察"
+    }
+  },
+  "projects": [
+    {
+      "id": "k-dense-ai-scientific-agent-skills",
+      "name": "Scientific Agent Skills",
+      "category": "skill-library",
+      "categoryLabel": "Agent 技能库",
+      "sections": [
+        "ecosystem"
+      ],
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 19983,
+      "forks": 2226,
+      "openIssues": 41,
+      "pushedAt": "2026-05-01T18:02:43Z",
+      "updatedAt": "2026-05-03T15:02:58Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "K-Dense AI",
+      "featuresZh": "大型科学 Agent 技能集合，覆盖科研、工程、分析、写作、生物信息和药物发现等方向。",
+      "rationaleZh": "高星技能层生态信号很强，但范围宽于生物信息。",
+      "sources": [
+        "GitHub 检索",
+        "相邻生态"
+      ]
+    },
+    {
+      "id": "snap-stanford-biomni",
+      "name": "Biomni",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "snap-stanford/Biomni",
+      "url": "https://github.com/snap-stanford/Biomni",
+      "projectUrl": "https://biomni.stanford.edu/",
+      "paperUrl": null,
+      "stars": 3038,
+      "forks": 566,
+      "openIssues": 67,
+      "pushedAt": "2026-04-27T18:52:59Z",
+      "updatedAt": "2026-05-03T12:14:11Z",
+      "release": "2025.05",
+      "venue": "bioRxiv / GitHub",
+      "impactFactor": "N/A (Preprint / Software)",
+      "developers": "Stanford SNAP / Kexin Huang et al.",
+      "featuresZh": "通用生物医学 AI Agent，结合 LLM 推理、检索增强规划和代码执行，覆盖多类生物医学任务。",
+      "rationaleZh": "当前 GitHub 上最显眼的通用生物医学 Agent 项目。",
+      "sources": [
+        "论文/项目页",
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "baranzinilab-kg-rag",
+      "name": "KG_RAG",
+      "category": "adjacent-tool",
+      "categoryLabel": "相邻 Bio-AI 工具",
+      "sections": [
+        "ecosystem"
+      ],
+      "repo": "BaranziniLab/KG_RAG",
+      "url": "https://github.com/BaranziniLab/KG_RAG",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 940,
+      "forks": 111,
+      "openIssues": 7,
+      "pushedAt": "2024-11-09T08:31:49Z",
+      "updatedAt": "2026-04-27T02:21:15Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "Baranzini Lab",
+      "featuresZh": "生物医学知识图谱 RAG 基础设施，可用于 Agent grounding，但本身不是完整 bioagent。",
+      "rationaleZh": "高星相邻基础设施，单列以免抬高专业 Agent 主榜。",
+      "sources": [
+        "GitHub 检索",
+        "相邻生态"
+      ]
+    },
+    {
+      "id": "clawbio-clawbio",
+      "name": "ClawBio",
+      "category": "skill-library",
+      "categoryLabel": "Agent 技能库",
+      "sections": [
+        "ecosystem"
+      ],
+      "repo": "ClawBio/ClawBio",
+      "url": "https://github.com/ClawBio/ClawBio",
+      "projectUrl": "https://clawbio.ai/",
+      "paperUrl": null,
+      "stars": 775,
+      "forks": 154,
+      "openIssues": 25,
+      "pushedAt": "2026-05-03T09:06:46Z",
+      "updatedAt": "2026-05-03T10:43:29Z",
+      "release": "2026.04",
+      "venue": "GitHub / ClawBio",
+      "impactFactor": "N/A (Software)",
+      "developers": "Manuel Corpas and community",
+      "featuresZh": "生物信息原生 AI Agent 技能库，本地优先、可复现流程，并支持 Claude Code 插件。",
+      "rationaleZh": "生物信息原生技能库；不是单一 Agent，但对 Agent 工作流很关键。",
+      "sources": [
+        "论文/项目页",
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "cafferychen777-mllmcelltype",
+      "name": "mLLMCelltype",
+      "category": "adjacent-tool",
+      "categoryLabel": "相邻 Bio-AI 工具",
+      "sections": [
+        "ecosystem"
+      ],
+      "repo": "cafferychen777/mLLMCelltype",
+      "url": "https://github.com/cafferychen777/mLLMCelltype",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 640,
+      "forks": 55,
+      "openIssues": 9,
+      "pushedAt": "2026-03-25T12:46:44Z",
+      "updatedAt": "2026-04-19T09:02:22Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "cafferychen777 contributors",
+      "featuresZh": "LLM 驱动的单细胞细胞类型注释工具；属于有用相邻技术，不是通用 Agent 系统。",
+      "rationaleZh": "高星单细胞 LLM 工具，作为相邻工具而非主榜 Agent。",
+      "sources": [
+        "GitHub 检索",
+        "相邻生态"
+      ]
+    },
+    {
+      "id": "k-dense-ai-k-dense-byok",
+      "name": "K-Dense BYOK",
+      "category": "platform-framework",
+      "categoryLabel": "Agent 平台/框架",
+      "sections": [
+        "ecosystem"
+      ],
+      "repo": "K-Dense-AI/k-dense-byok",
+      "url": "https://github.com/K-Dense-AI/k-dense-byok",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 617,
+      "forks": 68,
+      "openIssues": 5,
+      "pushedAt": "2026-05-01T17:16:49Z",
+      "updatedAt": "2026-05-02T16:32:42Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "K-Dense AI",
+      "featuresZh": "桌面 AI co-scientist，基于科学 Agent 技能，包含生物信息、药物发现、MCP 和本地优先等主题。",
+      "rationaleZh": "高星科学 Agent 平台，与生物信息工作流强相关。",
+      "sources": [
+        "GitHub 检索",
+        "相邻生态"
+      ]
+    },
+    {
+      "id": "gptomics-bioskills",
+      "name": "bioSkills",
+      "category": "skill-library",
+      "categoryLabel": "Agent 技能库",
+      "sections": [
+        "ecosystem"
+      ],
+      "repo": "GPTomics/bioSkills",
+      "url": "https://github.com/GPTomics/bioSkills",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 553,
+      "forks": 102,
+      "openIssues": 0,
+      "pushedAt": "2026-04-07T01:00:23Z",
+      "updatedAt": "2026-05-03T14:46:57Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "GPTomics contributors",
+      "featuresZh": "面向 Claude Code 等编码 Agent 的生物信息 SKILLS.md 集合。",
+      "rationaleZh": "高星生物信息技能包生态项目。",
+      "sources": [
+        "GitHub 检索",
+        "相邻生态"
+      ]
+    },
+    {
+      "id": "aipoch-medical-research-skills",
+      "name": "Medical Research Skills",
+      "category": "skill-library",
+      "categoryLabel": "Agent 技能库",
+      "sections": [
+        "ecosystem"
+      ],
+      "repo": "aipoch/medical-research-skills",
+      "url": "https://github.com/aipoch/medical-research-skills",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 472,
+      "forks": 38,
+      "openIssues": 2,
+      "pushedAt": "2026-04-27T08:36:52Z",
+      "updatedAt": "2026-05-03T15:04:30Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "aipoch contributors",
+      "featuresZh": "医疗研究 Agent 技能，覆盖方案设计、数据分析、证据洞察和学术写作。",
+      "rationaleZh": "与生物医学 Agent 工作流相邻的医疗研究技能库。",
+      "sources": [
+        "GitHub 检索",
+        "相邻生态"
+      ]
+    },
+    {
+      "id": "aristoteleo-pantheonos",
+      "name": "PantheonOS",
+      "category": "platform-framework",
+      "categoryLabel": "Agent 平台/框架",
+      "sections": [
+        "ecosystem"
+      ],
+      "repo": "aristoteleo/PantheonOS",
+      "url": "https://github.com/aristoteleo/PantheonOS",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 411,
+      "forks": 57,
+      "openIssues": 18,
+      "pushedAt": "2026-04-30T17:10:36Z",
+      "updatedAt": "2026-04-30T23:39:27Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "aristoteleo contributors",
+      "featuresZh": "通用、可演化、分布式数据科学 Agent 框架，带有生物学、单细胞、空间转录组主题。",
+      "rationaleZh": "有明确生物/单细胞标签的通用平台，因此放在生态榜而非专业主榜。",
+      "sources": [
+        "GitHub 检索",
+        "相邻生态"
+      ]
+    },
+    {
+      "id": "joshuachou2018-autoba",
+      "name": "AutoBA",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "JoshuaChou2018/AutoBA",
+      "url": "https://github.com/JoshuaChou2018/AutoBA",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 227,
+      "forks": 38,
+      "openIssues": 2,
+      "pushedAt": "2024-11-04T11:50:04Z",
+      "updatedAt": "2026-04-10T17:49:18Z",
+      "release": "2024.10",
+      "venue": "Advanced Science",
+      "impactFactor": "14.1",
+      "developers": "Juexiao Zhou et al.",
+      "featuresZh": "全自动多组学流程、YAML 配置、本地 LLM 支持、代码自动修复模块。",
+      "rationaleZh": "图片种子表中的论文型多组学 bioagent。",
+      "sources": [
+        "图片种子表",
+        "论文/项目页"
+      ]
+    },
+    {
+      "id": "arcinstitute-sragent",
+      "name": "SRAgent",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "ArcInstitute/SRAgent",
+      "url": "https://github.com/ArcInstitute/SRAgent",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 166,
+      "forks": 33,
+      "openIssues": 5,
+      "pushedAt": "2025-11-13T19:23:17Z",
+      "updatedAt": "2026-04-27T20:01:50Z",
+      "release": "2025.02",
+      "venue": "bioRxiv / GitHub",
+      "impactFactor": "N/A (Preprint / Software)",
+      "developers": "Arc Institute / scBaseCount authors",
+      "featuresZh": "面向 SRA 和相关生物信息数据库的数据获取与处理 LLM agents。",
+      "rationaleZh": "面向 SRA 数据库的具体生物信息 Agent。",
+      "sources": [
+        "论文/项目页",
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "cong-lab-crispr-gpt-pub",
+      "name": "CRISPR-GPT",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "cong-lab/crispr-gpt-pub",
+      "url": "https://github.com/cong-lab/crispr-gpt-pub",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 159,
+      "forks": 31,
+      "openIssues": 3,
+      "pushedAt": "2025-08-15T16:35:55Z",
+      "updatedAt": "2026-04-24T18:01:30Z",
+      "release": "2025.07",
+      "venue": "Nature Biomedical Engineering",
+      "impactFactor": "28.1",
+      "developers": "Kaixuan Huang et al.",
+      "featuresZh": "微调 GPT，覆盖基因编辑全周期设计、安全性合规检查、自动化协议草拟。",
+      "rationaleZh": "图片种子表中的高影响力基因编辑流程 Agent。",
+      "sources": [
+        "图片种子表",
+        "论文/项目页"
+      ]
+    },
+    {
+      "id": "bio-xyz-bioagents",
+      "name": "BioAgents",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "bio-xyz/BioAgents",
+      "url": "https://github.com/bio-xyz/BioAgents",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 146,
+      "forks": 24,
+      "openIssues": 4,
+      "pushedAt": "2026-05-01T10:08:31Z",
+      "updatedAt": "2026-05-02T21:47:01Z",
+      "release": "2025.11",
+      "venue": "Scientific Reports",
+      "impactFactor": "3.9",
+      "developers": "Nikita Mehandru et al.",
+      "featuresZh": "采用 Phi-3 小模型，针对 Biostars 社区知识精调，并集成 nf-core。",
+      "rationaleZh": "围绕 nf-core 与 Biostars 的生物信息助手。",
+      "sources": [
+        "图片种子表",
+        "论文/项目页"
+      ]
+    },
+    {
+      "id": "liu-hy-genomas",
+      "name": "GenoMAS",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "Liu-Hy/GenoMAS",
+      "url": "https://github.com/Liu-Hy/GenoMAS",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 138,
+      "forks": 25,
+      "openIssues": 0,
+      "pushedAt": "2026-04-20T02:09:09Z",
+      "updatedAt": "2026-04-20T02:09:13Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "Liu-Hy contributors",
+      "featuresZh": "面向基因表达等科学分析流程的轻量多 Agent 框架。",
+      "rationaleZh": "GitHub 检索发现的基因表达多 Agent 分析框架。",
+      "sources": [
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "jaechang-hits-sciagent-skills",
+      "name": "SciAgent-Skills",
+      "category": "skill-library",
+      "categoryLabel": "Agent 技能库",
+      "sections": [
+        "ecosystem"
+      ],
+      "repo": "jaechang-hits/SciAgent-Skills",
+      "url": "https://github.com/jaechang-hits/SciAgent-Skills",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 137,
+      "forks": 16,
+      "openIssues": 7,
+      "pushedAt": "2026-05-02T06:14:46Z",
+      "updatedAt": "2026-05-02T20:39:44Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "jaechang-hits contributors",
+      "featuresZh": "面向编码 Agent 的生物信息和生命科学技能，覆盖 RNA-seq、单细胞、药物发现和蛋白组。",
+      "rationaleZh": "可支撑 bioagent 工作流的领域技能库。",
+      "sources": [
+        "GitHub 检索",
+        "相邻生态"
+      ]
+    },
+    {
+      "id": "osu-nlp-group-scienceagentbench",
+      "name": "ScienceAgentBench",
+      "category": "benchmark-source",
+      "categoryLabel": "Benchmark/资料源",
+      "sections": [
+        "benchmark"
+      ],
+      "repo": "OSU-NLP-Group/ScienceAgentBench",
+      "url": "https://github.com/OSU-NLP-Group/ScienceAgentBench",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 136,
+      "forks": 19,
+      "openIssues": 5,
+      "pushedAt": "2026-04-29T23:45:00Z",
+      "updatedAt": "2026-04-29T23:45:03Z",
+      "release": "2025",
+      "venue": "ICLR / GitHub",
+      "impactFactor": "N/A (Benchmark)",
+      "developers": "OSU NLP Group",
+      "featuresZh": "面向数据驱动科学发现中语言 Agent 的严谨评测 Benchmark。",
+      "rationaleZh": "包含生物信息任务的通用科学 Agent Benchmark。",
+      "sources": [
+        "Benchmark/资料源",
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "nvidia-ai-blueprints-biomedical-aiq-research-agent",
+      "name": "NVIDIA Biomedical AI-Q Research Agent",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "NVIDIA-AI-Blueprints/biomedical-aiq-research-agent",
+      "url": "https://github.com/NVIDIA-AI-Blueprints/biomedical-aiq-research-agent",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 126,
+      "forks": 24,
+      "openIssues": 2,
+      "pushedAt": "2026-02-12T06:49:41Z",
+      "updatedAt": "2026-05-02T23:08:57Z",
+      "release": "2025+",
+      "venue": "GitHub / NVIDIA AI Blueprints",
+      "impactFactor": "N/A (Software)",
+      "developers": "NVIDIA AI Blueprints",
+      "featuresZh": "基于 NVIDIA AI-Q 风格编排的生物医学研究 Agent 蓝图。",
+      "rationaleZh": "有厂商背书的生物医学研究 Agent 实现。",
+      "sources": [
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "nigmat-future-bioagent",
+      "name": "Nigmat bioagent",
+      "category": "watchlist",
+      "categoryLabel": "候选观察",
+      "sections": [
+        "watch"
+      ],
+      "repo": "Nigmat-future/bioagent",
+      "url": "https://github.com/Nigmat-future/bioagent",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 100,
+      "forks": 10,
+      "openIssues": 0,
+      "pushedAt": "2026-04-20T17:03:07Z",
+      "updatedAt": "2026-04-26T22:36:06Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "Nigmat-future contributors",
+      "featuresZh": "用于端到端生物信息研究的自主多 Agent 系统。",
+      "rationaleZh": "名称和描述高度匹配，但仍需更强外部验证。",
+      "sources": [
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "future-house-bixbench",
+      "name": "BixBench",
+      "category": "benchmark-source",
+      "categoryLabel": "Benchmark/资料源",
+      "sections": [
+        "benchmark"
+      ],
+      "repo": "Future-House/BixBench",
+      "url": "https://github.com/Future-House/BixBench",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 98,
+      "forks": 19,
+      "openIssues": 1,
+      "pushedAt": "2025-10-06T21:54:03Z",
+      "updatedAt": "2026-04-30T03:00:10Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Benchmark)",
+      "developers": "Future House",
+      "featuresZh": "面向计算生物学 LLM Agent 的 Benchmark。",
+      "rationaleZh": "重要评测资料源，不是 Agent。",
+      "sources": [
+        "Benchmark/资料源",
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "ai4nucleome-biomaster",
+      "name": "BioMaster",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "ai4nucleome/BioMaster",
+      "url": "https://github.com/ai4nucleome/BioMaster",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 92,
+      "forks": 10,
+      "openIssues": 2,
+      "pushedAt": "2025-11-04T08:46:19Z",
+      "updatedAt": "2026-04-15T01:36:41Z",
+      "release": "2025.01",
+      "venue": "bioRxiv",
+      "impactFactor": "N/A (Preprint)",
+      "developers": "Houcheng Su et al.",
+      "featuresZh": "多代理角色分工、RAG 增强型知识检索、长程内存管理、Check-Agent 验证。",
+      "rationaleZh": "图片种子表中的论文型多 Agent 生物信息系统。",
+      "sources": [
+        "图片种子表",
+        "论文/项目页"
+      ]
+    },
+    {
+      "id": "elliotxie-cassia",
+      "name": "CASSIA",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "ElliotXie/CASSIA",
+      "url": "https://github.com/ElliotXie/CASSIA",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 89,
+      "forks": 6,
+      "openIssues": 2,
+      "pushedAt": "2026-04-14T19:30:29Z",
+      "updatedAt": "2026-04-14T19:30:34Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "ElliotXie contributors",
+      "featuresZh": "面向单细胞细胞类型注释的多 Agent LLM 框架，结合检索增强提示。",
+      "rationaleZh": "领域边界清晰的单细胞多 Agent 工作流。",
+      "sources": [
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "virtualpatientengine-aiagents4pharma",
+      "name": "AI Agents for Pharma",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "VirtualPatientEngine/AIAgents4Pharma",
+      "url": "https://github.com/VirtualPatientEngine/AIAgents4Pharma",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 80,
+      "forks": 46,
+      "openIssues": 72,
+      "pushedAt": "2026-03-30T20:09:17Z",
+      "updatedAt": "2026-04-30T10:07:05Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "Virtual Patient Engine contributors",
+      "featuresZh": "面向药物发现、药物开发、制药研发、知识图谱与 QSP 建模的 AI Agents。",
+      "rationaleZh": "明确面向制药研发的药物发现 Agent 项目。",
+      "sources": [
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "zjlrock777-awesome-llm-agents-scientific-discovery",
+      "name": "Awesome LLM Agents for Scientific Discovery",
+      "category": "benchmark-source",
+      "categoryLabel": "Benchmark/资料源",
+      "sections": [
+        "benchmark"
+      ],
+      "repo": "zjlrock777/Awesome-LLM-Agents-Scientific-Discovery",
+      "url": "https://github.com/zjlrock777/Awesome-LLM-Agents-Scientific-Discovery",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 74,
+      "forks": 6,
+      "openIssues": 3,
+      "pushedAt": "2025-09-28T03:22:46Z",
+      "updatedAt": "2026-03-12T07:00:28Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Source List)",
+      "developers": "zjlrock777 contributors",
+      "featuresZh": "LLM 科学发现/生物医学研究 Agent 资料集合。",
+      "rationaleZh": "用于发现候选项目的资料源，不作为 Agent 排名。",
+      "sources": [
+        "Benchmark/资料源",
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "astrazeneca-cellatria",
+      "name": "cellatria",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "AstraZeneca/cellatria",
+      "url": "https://github.com/AstraZeneca/cellatria",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 64,
+      "forks": 21,
+      "openIssues": 1,
+      "pushedAt": "2026-01-23T13:13:42Z",
+      "updatedAt": "2026-04-27T08:36:45Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "AstraZeneca",
+      "featuresZh": "用于单细胞 RNA-seq 数据分析摄取与标准化的 Agentic AI 框架。",
+      "rationaleZh": "工业界背景的单细胞 Agentic 框架。",
+      "sources": [
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "keiji-ai-biodsa",
+      "name": "BioDSA",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "Keiji-AI/BioDSA",
+      "url": "https://github.com/Keiji-AI/BioDSA",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 63,
+      "forks": 8,
+      "openIssues": 1,
+      "pushedAt": "2026-02-12T12:12:33Z",
+      "updatedAt": "2026-04-27T16:55:03Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "Keiji-AI contributors",
+      "featuresZh": "用于快速原型化生物医学和数据科学 AI agents 的框架。",
+      "rationaleZh": "GitHub 检索发现的生物医学 Agent 原型框架。",
+      "sources": [
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "jpickard1-brad",
+      "name": "BRAD",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "Jpickard1/BRAD",
+      "url": "https://github.com/Jpickard1/BRAD",
+      "projectUrl": "https://brad-bioinformatics-retrieval-augmented-data.readthedocs.io/",
+      "paperUrl": null,
+      "stars": 59,
+      "forks": 5,
+      "openIssues": 2,
+      "pushedAt": "2025-05-14T15:36:44Z",
+      "updatedAt": "2026-04-27T04:41:33Z",
+      "release": "2025.05",
+      "venue": "Bioinformatics / GitHub",
+      "impactFactor": "5.4",
+      "developers": "Jpickard1 / BRAD contributors",
+      "featuresZh": "Bioinformatics Retrieval Augmented Digital 助手，支持 RAG、工具/数据库集成、代码执行和生物标志物发现流程。",
+      "rationaleZh": "集成工具与数据库的生物信息 RAG 助手。",
+      "sources": [
+        "论文/项目页",
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "mims-harvard-kgarevion",
+      "name": "KGARevion",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "mims-harvard/KGARevion",
+      "url": "https://github.com/mims-harvard/KGARevion",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 48,
+      "forks": 19,
+      "openIssues": 3,
+      "pushedAt": "2025-03-04T17:51:02Z",
+      "updatedAt": "2026-04-17T09:29:23Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "MIMS Harvard contributors",
+      "featuresZh": "面向知识密集型生物医学问答的知识图谱辅助 AI Agent。",
+      "rationaleZh": "明确定位于知识图谱生物医学问答的 Agent。",
+      "sources": [
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "variomeanalytics-bioinformatics-agent-skills",
+      "name": "Bioinformatics Agent Skills",
+      "category": "skill-library",
+      "categoryLabel": "Agent 技能库",
+      "sections": [
+        "ecosystem"
+      ],
+      "repo": "variomeanalytics/bioinformatics-agent-skills",
+      "url": "https://github.com/variomeanalytics/bioinformatics-agent-skills",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 46,
+      "forks": 4,
+      "openIssues": 0,
+      "pushedAt": "2026-04-18T00:17:03Z",
+      "updatedAt": "2026-05-03T13:55:12Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "Variome Analytics",
+      "featuresZh": "MCP 服务，可让 Agent 查询生物信息工作流知识图谱。",
+      "rationaleZh": "面向 Agent 的生物信息工作流知识层。",
+      "sources": [
+        "GitHub 检索",
+        "相邻生态"
+      ]
+    },
+    {
+      "id": "biagent-dev-bia",
+      "name": "BIA (BioInformatics Agent)",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "biagent-dev/bia",
+      "url": "https://github.com/biagent-dev/bia",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 43,
+      "forks": 4,
+      "openIssues": 1,
+      "pushedAt": "2024-08-21T02:41:30Z",
+      "updatedAt": "2026-04-13T18:14:29Z",
+      "release": "2025.01",
+      "venue": "Bioinformatics",
+      "impactFactor": "5.4",
+      "developers": "Qi Xin et al.",
+      "featuresZh": "专注单细胞分析、迭代自我完善、多数据库自动集成。",
+      "rationaleZh": "图片种子表中的论文型生物信息 Agent。",
+      "sources": [
+        "图片种子表",
+        "论文/项目页"
+      ]
+    },
+    {
+      "id": "epistasislab-escargot",
+      "name": "ESCARGOT",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "EpistasisLab/ESCARGOT",
+      "url": "https://github.com/EpistasisLab/ESCARGOT",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 35,
+      "forks": 7,
+      "openIssues": 5,
+      "pushedAt": "2025-06-02T23:22:24Z",
+      "updatedAt": "2026-02-28T09:56:56Z",
+      "release": "2025.01",
+      "venue": "Bioinformatics",
+      "impactFactor": "5.4",
+      "developers": "EpistasisLab",
+      "featuresZh": "思维图（GoT）驱动、Cypher 查询、知识图谱深度融合、透明推理。",
+      "rationaleZh": "论文型图推理生物医学 Agent。",
+      "sources": [
+        "图片种子表",
+        "论文/项目页"
+      ]
+    },
+    {
+      "id": "webioinfo01-awesome-ai-meets-biology",
+      "name": "Awesome AI Meets Biology",
+      "category": "benchmark-source",
+      "categoryLabel": "Benchmark/资料源",
+      "sections": [
+        "benchmark"
+      ],
+      "repo": "Webioinfo01/Awesome-AI-Meets-Biology",
+      "url": "https://github.com/Webioinfo01/Awesome-AI-Meets-Biology",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 30,
+      "forks": 2,
+      "openIssues": 0,
+      "pushedAt": "2025-12-26T05:49:54Z",
+      "updatedAt": "2026-04-25T07:36:50Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Source List)",
+      "developers": "Webioinfo01 contributors",
+      "featuresZh": "生物医学和生物信息方向 LLM、Agent、工具资料集合。",
+      "rationaleZh": "候选发现资料源，不是实现项目。",
+      "sources": [
+        "Benchmark/资料源",
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "bioagent-bench-bioagent-bench",
+      "name": "BioAgent Bench",
+      "category": "benchmark-source",
+      "categoryLabel": "Benchmark/资料源",
+      "sections": [
+        "benchmark"
+      ],
+      "repo": "bioagent-bench/bioagent-bench",
+      "url": "https://github.com/bioagent-bench/bioagent-bench",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 24,
+      "forks": 0,
+      "openIssues": 0,
+      "pushedAt": "2026-05-02T18:57:57Z",
+      "updatedAt": "2026-04-30T02:35:09Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Benchmark)",
+      "developers": "bioagent-bench contributors",
+      "featuresZh": "用于 bioagent 评测和任务构建的 Benchmark 项目。",
+      "rationaleZh": "bioagent 领域具名 Benchmark。",
+      "sources": [
+        "Benchmark/资料源",
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "westlake-autolab-biokgbench",
+      "name": "BioKGBench",
+      "category": "benchmark-source",
+      "categoryLabel": "Benchmark/资料源",
+      "sections": [
+        "benchmark"
+      ],
+      "repo": "westlake-autolab/BioKGBench",
+      "url": "https://github.com/westlake-autolab/BioKGBench",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 24,
+      "forks": 1,
+      "openIssues": 0,
+      "pushedAt": "2024-10-14T03:20:26Z",
+      "updatedAt": "2025-11-18T06:22:39Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Benchmark)",
+      "developers": "Westlake AutoLab",
+      "featuresZh": "面向生物医学科学 AI Agent 的知识图谱检查 Benchmark。",
+      "rationaleZh": "面向生物医学知识图谱推理的 Benchmark。",
+      "sources": [
+        "Benchmark/资料源",
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "holobiomicslab-mimosa-ai",
+      "name": "Mimosa-AI",
+      "category": "watchlist",
+      "categoryLabel": "候选观察",
+      "sections": [
+        "watch"
+      ],
+      "repo": "HolobiomicsLab/Mimosa-AI",
+      "url": "https://github.com/HolobiomicsLab/Mimosa-AI",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 21,
+      "forks": 6,
+      "openIssues": 22,
+      "pushedAt": "2026-04-21T13:42:01Z",
+      "updatedAt": "2026-04-28T08:55:00Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "HolobiomicsLab",
+      "featuresZh": "自进化自主科学研究框架，支持多 Agent 工作流和 MCP 工具发现。",
+      "rationaleZh": "带生物信息标签的自主科学研究框架，值得观察。",
+      "sources": [
+        "GitHub 检索",
+        "相邻生态"
+      ]
+    },
+    {
+      "id": "bgiresearch-biomics",
+      "name": "BiOmics",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": "BGIResearch/BiOmics",
+      "url": "https://github.com/BGIResearch/BiOmics",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 16,
+      "forks": 2,
+      "openIssues": 1,
+      "pushedAt": "2026-03-02T09:51:20Z",
+      "updatedAt": "2026-04-16T10:56:03Z",
+      "release": "2026.01",
+      "venue": "bioRxiv",
+      "impactFactor": "N/A (Preprint)",
+      "developers": "BGI Research",
+      "featuresZh": "双轨架构（推理+嵌入）、3.5 亿关系知识图谱、跨尺度解释。",
+      "rationaleZh": "图片种子表中的新近多组学 Agent。",
+      "sources": [
+        "图片种子表",
+        "论文/项目页"
+      ]
+    },
+    {
+      "id": "plobb-celltype-agent",
+      "name": "celltype-agent",
+      "category": "watchlist",
+      "categoryLabel": "候选观察",
+      "sections": [
+        "watch"
+      ],
+      "repo": "plobb/celltype-agent",
+      "url": "https://github.com/plobb/celltype-agent",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 11,
+      "forks": 1,
+      "openIssues": 0,
+      "pushedAt": "2026-04-22T08:52:14Z",
+      "updatedAt": "2026-04-27T17:14:08Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "plobb contributors",
+      "featuresZh": "用于单细胞和空间组学细胞类型自动注释的 Agentic AI 工具。",
+      "rationaleZh": "具体的单细胞 Agentic 工具，目前 GitHub 热度较低。",
+      "sources": [
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "donbr-lifesciences-research",
+      "name": "Life Sciences Research MCP",
+      "category": "skill-library",
+      "categoryLabel": "Agent 技能库",
+      "sections": [
+        "ecosystem"
+      ],
+      "repo": "donbr/lifesciences-research",
+      "url": "https://github.com/donbr/lifesciences-research",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 6,
+      "forks": 2,
+      "openIssues": 1,
+      "pushedAt": "2026-02-26T01:38:30Z",
+      "updatedAt": "2026-03-13T05:32:35Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "donbr contributors",
+      "featuresZh": "面向 Open Targets、ChEMBL、UniProt 等生命科学 API 的 MCP 封装。",
+      "rationaleZh": "生命科学 Agent 的工具访问层。",
+      "sources": [
+        "GitHub 检索",
+        "相邻生态"
+      ]
+    },
+    {
+      "id": "davidfischerlab-kai",
+      "name": "kai",
+      "category": "watchlist",
+      "categoryLabel": "候选观察",
+      "sections": [
+        "watch"
+      ],
+      "repo": "davidfischerlab/kai",
+      "url": "https://github.com/davidfischerlab/kai",
+      "projectUrl": null,
+      "paperUrl": null,
+      "stars": 5,
+      "forks": 1,
+      "openIssues": 2,
+      "pushedAt": "2026-02-03T08:55:02Z",
+      "updatedAt": "2026-03-18T07:17:47Z",
+      "release": "2025+",
+      "venue": "GitHub",
+      "impactFactor": "N/A (Software)",
+      "developers": "David Fischer Lab",
+      "featuresZh": "通过 VS Code 扩展在 Jupyter 中构建单细胞组学分析的 Agentic AI。",
+      "rationaleZh": "有意思的 notebook 原生单细胞 Agent，当前仍处早期。",
+      "sources": [
+        "GitHub 检索"
+      ]
+    },
+    {
+      "id": "cellagent",
+      "name": "CellAgent",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": null,
+      "url": "https://openreview.net/forum?id=BsA2GNkJhz",
+      "projectUrl": "http://cell.agent4science.cn/",
+      "paperUrl": "https://openreview.net/forum?id=BsA2GNkJhz",
+      "stars": null,
+      "forks": null,
+      "openIssues": null,
+      "pushedAt": null,
+      "updatedAt": null,
+      "release": "2024.05 / 2026.01",
+      "venue": "bioRxiv / arXiv / ICLR 2026",
+      "impactFactor": "N/A (Preprint / Conference)",
+      "developers": "Yihang Xiao et al.",
+      "featuresZh": "面向自然语言单细胞与空间转录组分析的 LLM 驱动多 Agent 框架。",
+      "rationaleZh": "未找到可靠公开 GitHub 仓库，作为论文型核心项目保留。",
+      "sources": [
+        "图片种子表",
+        "论文/项目页",
+        "手工维护"
+      ]
+    },
+    {
+      "id": "stella",
+      "name": "STELLA",
+      "category": "direct-agent",
+      "categoryLabel": "专业 BioAgent",
+      "sections": [
+        "core"
+      ],
+      "repo": null,
+      "url": "https://doi.org/10.1101/2025.07.01.662467",
+      "projectUrl": null,
+      "paperUrl": "https://doi.org/10.1101/2025.07.01.662467",
+      "stars": null,
+      "forks": null,
+      "openIssues": null,
+      "pushedAt": null,
+      "updatedAt": null,
+      "release": "2025.07",
+      "venue": "bioRxiv / arXiv",
+      "impactFactor": "N/A (Preprint)",
+      "developers": "Ruofan Jin, Zaixi Zhang et al.",
+      "featuresZh": "自进化生物医学研究 Agent，多代理架构、可演化推理模板库和动态 Tool Ocean。",
+      "rationaleZh": "论文型自进化生物医学 Agent，暂未确认稳定公开仓库。",
+      "sources": [
+        "论文/项目页",
+        "手工维护"
+      ]
+    }
+  ]
+}

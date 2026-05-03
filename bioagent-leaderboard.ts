@@ -13,6 +13,9 @@
  *   bun ./bioagent-leaderboard.ts --offline --output bioagent-leaderboard.md
  */
 
+import { mkdir } from "node:fs/promises";
+import { dirname, join } from "node:path";
+
 type ProjectSource =
   | "Image Seed"
   | "Paper/Page"
@@ -692,6 +695,10 @@ const PROJECTS: ProjectEntry[] = [
 
 const DEFAULT_OUTPUT = "bioagent-leaderboard.md";
 const DEFAULT_ZH_OUTPUT = "bioagent-leaderboard.zh-CN.md";
+const DEFAULT_JSON_OUTPUT = "site/data/latest.json";
+const DEFAULT_HISTORY_OUTPUT = "site/data/history.json";
+const DEFAULT_SNAPSHOT_DIR = "site/data/snapshots";
+const HISTORY_LIMIT = 120;
 const NUMBER_FORMAT = new Intl.NumberFormat("en-US");
 
 function getFlagValue(flag: string, fallback: string): string | null {
@@ -700,13 +707,31 @@ function getFlagValue(flag: string, fallback: string): string | null {
   return process.argv[idx + 1] ?? fallback;
 }
 
-function generatedDate(): string {
+function getOptionalFlag(flag: string): string | null {
+  const idx = process.argv.indexOf(flag);
+  if (idx === -1) return null;
+  return process.argv[idx + 1] ?? null;
+}
+
+function generatedDate(date = new Date()): string {
   return new Intl.DateTimeFormat("en-CA", {
     timeZone: process.env.TZ || "Asia/Shanghai",
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
-  }).format(new Date());
+  }).format(date);
+}
+
+function generatedDateTime(date = new Date()): string {
+  return new Intl.DateTimeFormat("zh-CN", {
+    timeZone: process.env.TZ || "Asia/Shanghai",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).format(date);
 }
 
 function escapeMarkdownCell(cell: string): string {
@@ -944,12 +969,184 @@ function buildChineseMarkdown(projects: RankedProject[]): string {
   ].join("\n");
 }
 
+
+type SiteProject = {
+  id: string;
+  name: string;
+  category: ProjectCategory;
+  categoryLabel: string;
+  sections: BoardSection[];
+  repo: string | null;
+  url: string | null;
+  projectUrl: string | null;
+  paperUrl: string | null;
+  stars: number | null;
+  forks: number | null;
+  openIssues: number | null;
+  pushedAt: string | null;
+  updatedAt: string | null;
+  release: string;
+  venue: string;
+  impactFactor: string;
+  developers: string;
+  featuresZh: string;
+  rationaleZh: string;
+  sources: string[];
+};
+
+type SitePayload = {
+  generatedAt: string;
+  generatedDate: string;
+  generatedDateTime: string;
+  timezone: string;
+  totals: {
+    projects: number;
+    repos: number;
+    stars: number;
+    forks: number;
+    coreProjects: number;
+    ecosystemProjects: number;
+    benchmarkProjects: number;
+    watchProjects: number;
+  };
+  categories: Record<ProjectCategory, { label: string; zhLabel: string }>;
+  projects: SiteProject[];
+};
+
+type HistorySnapshot = {
+  date: string;
+  generatedAt: string;
+  projects: Array<{
+    id: string;
+    name: string;
+    repo: string | null;
+    category: ProjectCategory;
+    sections: BoardSection[];
+    stars: number | null;
+    forks: number | null;
+  }>;
+};
+
+type HistoryPayload = {
+  updatedAt: string;
+  snapshots: HistorySnapshot[];
+};
+
+function projectId(project: ProjectEntry): string {
+  return (project.repo ?? project.name).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+function projectUrl(project: ProjectEntry): string | null {
+  if (project.repo) return `https://github.com/${project.repo}`;
+  return project.paperUrl ?? project.projectUrl ?? null;
+}
+
+function siteProjects(projects: RankedProject[]): SiteProject[] {
+  return projects.sort(sortByStarsThenName).map((project) => ({
+    id: projectId(project),
+    name: project.name,
+    category: project.category,
+    categoryLabel: categoryLabel(project.category, "zh"),
+    sections: project.sections,
+    repo: project.repo ?? null,
+    url: projectUrl(project),
+    projectUrl: project.projectUrl ?? null,
+    paperUrl: project.paperUrl ?? null,
+    stars: project.stats?.stars ?? null,
+    forks: project.stats?.forks ?? null,
+    openIssues: project.stats?.openIssues ?? null,
+    pushedAt: project.stats?.pushedAt ?? null,
+    updatedAt: project.stats?.updatedAt ?? null,
+    release: project.release,
+    venue: project.venue,
+    impactFactor: project.impactFactor,
+    developers: project.developers,
+    featuresZh: project.featuresZh,
+    rationaleZh: project.rationaleZh,
+    sources: project.sources.map((source) => SOURCE_INFO[source].zhLabel),
+  }));
+}
+
+function buildSitePayload(projects: RankedProject[], now = new Date()): SitePayload {
+  const mapped = siteProjects([...projects]);
+  const sum = (selector: (project: SiteProject) => number | null) => mapped.reduce((acc, project) => acc + (selector(project) ?? 0), 0);
+  return {
+    generatedAt: now.toISOString(),
+    generatedDate: generatedDate(now),
+    generatedDateTime: generatedDateTime(now),
+    timezone: process.env.TZ || "Asia/Shanghai",
+    totals: {
+      projects: mapped.length,
+      repos: mapped.filter((project) => project.repo).length,
+      stars: sum((project) => project.stars),
+      forks: sum((project) => project.forks),
+      coreProjects: mapped.filter((project) => project.sections.includes("core")).length,
+      ecosystemProjects: mapped.filter((project) => project.sections.includes("ecosystem")).length,
+      benchmarkProjects: mapped.filter((project) => project.sections.includes("benchmark")).length,
+      watchProjects: mapped.filter((project) => project.sections.includes("watch")).length,
+    },
+    categories: CATEGORY_INFO,
+    projects: mapped,
+  };
+}
+
+function buildSnapshot(payload: SitePayload): HistorySnapshot {
+  return {
+    date: payload.generatedDate,
+    generatedAt: payload.generatedAt,
+    projects: payload.projects.map((project) => ({
+      id: project.id,
+      name: project.name,
+      repo: project.repo,
+      category: project.category,
+      sections: project.sections,
+      stars: project.stars,
+      forks: project.forks,
+    })),
+  };
+}
+
+async function readHistory(path: string): Promise<HistoryPayload> {
+  try {
+    const file = Bun.file(path);
+    if (!(await file.exists())) return { updatedAt: new Date(0).toISOString(), snapshots: [] };
+    const parsed = (await file.json()) as Partial<HistoryPayload>;
+    return {
+      updatedAt: typeof parsed.updatedAt === "string" ? parsed.updatedAt : new Date(0).toISOString(),
+      snapshots: Array.isArray(parsed.snapshots) ? parsed.snapshots as HistorySnapshot[] : [],
+    };
+  } catch {
+    return { updatedAt: new Date(0).toISOString(), snapshots: [] };
+  }
+}
+
+async function writeJson(path: string, value: unknown): Promise<void> {
+  await mkdir(dirname(path), { recursive: true });
+  await Bun.write(path, `${JSON.stringify(value, null, 2)}\n`);
+}
+
+async function writeSiteData(payload: SitePayload, latestPath: string, historyPath: string, snapshotDir: string): Promise<void> {
+  const snapshot = buildSnapshot(payload);
+  const history = await readHistory(historyPath);
+  const snapshotsByDate = new Map(history.snapshots.map((item) => [item.date, item]));
+  snapshotsByDate.set(snapshot.date, snapshot);
+  const snapshots = [...snapshotsByDate.values()].sort((a, b) => a.date.localeCompare(b.date)).slice(-HISTORY_LIMIT);
+  const nextHistory: HistoryPayload = { updatedAt: payload.generatedAt, snapshots };
+
+  await writeJson(latestPath, payload);
+  await writeJson(historyPath, nextHistory);
+  await writeJson(join(snapshotDir, `${payload.generatedDate}.json`), snapshot);
+}
+
 async function main(): Promise<void> {
   const offline = process.argv.includes("--offline");
   const token = process.env.GITHUB_TOKEN;
   const outputPath = getFlagValue("--output", DEFAULT_OUTPUT);
   const explicitZhOutputPath = getFlagValue("--zh-output", DEFAULT_ZH_OUTPUT);
   const zhOutputPath = explicitZhOutputPath ?? (outputPath ? DEFAULT_ZH_OUTPUT : null);
+  const jsonOutputPath = getFlagValue("--json-output", DEFAULT_JSON_OUTPUT);
+  const historyOutputPath = getFlagValue("--history-output", DEFAULT_HISTORY_OUTPUT);
+  const snapshotDir = getOptionalFlag("--snapshot-dir") ?? DEFAULT_SNAPSHOT_DIR;
 
   if (!token && !offline) console.log("Tip: set GITHUB_TOKEN to avoid GitHub API rate limiting\n");
 
@@ -966,6 +1163,12 @@ async function main(): Promise<void> {
   if (zhOutputPath) {
     await Bun.write(zhOutputPath, buildChineseMarkdown(projects));
     console.log(`Markdown written to ${zhOutputPath}`);
+  }
+  if (jsonOutputPath && historyOutputPath && snapshotDir) {
+    const payload = buildSitePayload(projects);
+    await writeSiteData(payload, jsonOutputPath, historyOutputPath, snapshotDir);
+    console.log(`Site data written to ${jsonOutputPath}`);
+    console.log(`History written to ${historyOutputPath}`);
   }
 }
 

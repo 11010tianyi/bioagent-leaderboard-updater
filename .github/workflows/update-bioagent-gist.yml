@@ -1,4 +1,4 @@
-name: Update bioagent leaderboard gist
+name: Update bioagent leaderboard and Pages
 
 on:
   schedule:
@@ -8,14 +8,28 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: oven-sh/setup-bun@v2
+
+      - uses: actions/configure-pages@v5
 
       - name: Validate required secrets
         run: |
@@ -36,29 +50,49 @@ jobs:
         run: |
           cp bioagent-leaderboard.ts gist/bioagent-leaderboard.ts
 
-      - name: Generate leaderboard markdown
+      - name: Generate leaderboard markdown and data
         working-directory: gist
         env:
           TZ: Asia/Shanghai
           GITHUB_TOKEN: ${{ secrets.GIST_TOKEN }}
         run: |
-          bun ./bioagent-leaderboard.ts --output bioagent-leaderboard.md --zh-output bioagent-leaderboard.zh-CN.md
+          bun ./bioagent-leaderboard.ts \
+            --output bioagent-leaderboard.md \
+            --zh-output bioagent-leaderboard.zh-CN.md \
+            --json-output latest.json \
+            --history-output history.json \
+            --snapshot-dir snapshots
 
-      - name: Commit and push changes
+      - name: Copy generated data into Pages site
+        run: |
+          mkdir -p site/data
+          cp gist/latest.json site/data/latest.json
+          cp gist/history.json site/data/history.json
+          cp gist/bioagent-leaderboard.md site/bioagent-leaderboard.md
+          cp gist/bioagent-leaderboard.zh-CN.md site/bioagent-leaderboard.zh-CN.md
+
+      - name: Commit and push gist changes
         working-directory: gist
         env:
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
         run: |
           if git diff --quiet; then
-            echo "No changes"
+            echo "No gist changes"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add bioagent-leaderboard.ts bioagent-leaderboard.md bioagent-leaderboard.zh-CN.md
+          git add bioagent-leaderboard.ts bioagent-leaderboard.md bioagent-leaderboard.zh-CN.md latest.json history.json snapshots
           git commit -m "Update bioagent leaderboard for $(date +%F)"
           git remote set-url origin "https://x-access-token:${GIST_TOKEN}@gist.github.com/${GIST_ID}.git"
           git push origin HEAD:master
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

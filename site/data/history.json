@@ -1,0 +1,451 @@
+{
+  "updatedAt": "2026-05-03T15:05:05.557Z",
+  "snapshots": [
+    {
+      "date": "2026-05-03",
+      "generatedAt": "2026-05-03T15:05:05.557Z",
+      "projects": [
+        {
+          "id": "k-dense-ai-scientific-agent-skills",
+          "name": "Scientific Agent Skills",
+          "repo": "K-Dense-AI/scientific-agent-skills",
+          "category": "skill-library",
+          "sections": [
+            "ecosystem"
+          ],
+          "stars": 19983,
+          "forks": 2226
+        },
+        {
+          "id": "snap-stanford-biomni",
+          "name": "Biomni",
+          "repo": "snap-stanford/Biomni",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 3038,
+          "forks": 566
+        },
+        {
+          "id": "baranzinilab-kg-rag",
+          "name": "KG_RAG",
+          "repo": "BaranziniLab/KG_RAG",
+          "category": "adjacent-tool",
+          "sections": [
+            "ecosystem"
+          ],
+          "stars": 940,
+          "forks": 111
+        },
+        {
+          "id": "clawbio-clawbio",
+          "name": "ClawBio",
+          "repo": "ClawBio/ClawBio",
+          "category": "skill-library",
+          "sections": [
+            "ecosystem"
+          ],
+          "stars": 775,
+          "forks": 154
+        },
+        {
+          "id": "cafferychen777-mllmcelltype",
+          "name": "mLLMCelltype",
+          "repo": "cafferychen777/mLLMCelltype",
+          "category": "adjacent-tool",
+          "sections": [
+            "ecosystem"
+          ],
+          "stars": 640,
+          "forks": 55
+        },
+        {
+          "id": "k-dense-ai-k-dense-byok",
+          "name": "K-Dense BYOK",
+          "repo": "K-Dense-AI/k-dense-byok",
+          "category": "platform-framework",
+          "sections": [
+            "ecosystem"
+          ],
+          "stars": 617,
+          "forks": 68
+        },
+        {
+          "id": "gptomics-bioskills",
+          "name": "bioSkills",
+          "repo": "GPTomics/bioSkills",
+          "category": "skill-library",
+          "sections": [
+            "ecosystem"
+          ],
+          "stars": 553,
+          "forks": 102
+        },
+        {
+          "id": "aipoch-medical-research-skills",
+          "name": "Medical Research Skills",
+          "repo": "aipoch/medical-research-skills",
+          "category": "skill-library",
+          "sections": [
+            "ecosystem"
+          ],
+          "stars": 472,
+          "forks": 38
+        },
+        {
+          "id": "aristoteleo-pantheonos",
+          "name": "PantheonOS",
+          "repo": "aristoteleo/PantheonOS",
+          "category": "platform-framework",
+          "sections": [
+            "ecosystem"
+          ],
+          "stars": 411,
+          "forks": 57
+        },
+        {
+          "id": "joshuachou2018-autoba",
+          "name": "AutoBA",
+          "repo": "JoshuaChou2018/AutoBA",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 227,
+          "forks": 38
+        },
+        {
+          "id": "arcinstitute-sragent",
+          "name": "SRAgent",
+          "repo": "ArcInstitute/SRAgent",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 166,
+          "forks": 33
+        },
+        {
+          "id": "cong-lab-crispr-gpt-pub",
+          "name": "CRISPR-GPT",
+          "repo": "cong-lab/crispr-gpt-pub",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 159,
+          "forks": 31
+        },
+        {
+          "id": "bio-xyz-bioagents",
+          "name": "BioAgents",
+          "repo": "bio-xyz/BioAgents",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 146,
+          "forks": 24
+        },
+        {
+          "id": "liu-hy-genomas",
+          "name": "GenoMAS",
+          "repo": "Liu-Hy/GenoMAS",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 138,
+          "forks": 25
+        },
+        {
+          "id": "jaechang-hits-sciagent-skills",
+          "name": "SciAgent-Skills",
+          "repo": "jaechang-hits/SciAgent-Skills",
+          "category": "skill-library",
+          "sections": [
+            "ecosystem"
+          ],
+          "stars": 137,
+          "forks": 16
+        },
+        {
+          "id": "osu-nlp-group-scienceagentbench",
+          "name": "ScienceAgentBench",
+          "repo": "OSU-NLP-Group/ScienceAgentBench",
+          "category": "benchmark-source",
+          "sections": [
+            "benchmark"
+          ],
+          "stars": 136,
+          "forks": 19
+        },
+        {
+          "id": "nvidia-ai-blueprints-biomedical-aiq-research-agent",
+          "name": "NVIDIA Biomedical AI-Q Research Agent",
+          "repo": "NVIDIA-AI-Blueprints/biomedical-aiq-research-agent",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 126,
+          "forks": 24
+        },
+        {
+          "id": "nigmat-future-bioagent",
+          "name": "Nigmat bioagent",
+          "repo": "Nigmat-future/bioagent",
+          "category": "watchlist",
+          "sections": [
+            "watch"
+          ],
+          "stars": 100,
+          "forks": 10
+        },
+        {
+          "id": "future-house-bixbench",
+          "name": "BixBench",
+          "repo": "Future-House/BixBench",
+          "category": "benchmark-source",
+          "sections": [
+            "benchmark"
+          ],
+          "stars": 98,
+          "forks": 19
+        },
+        {
+          "id": "ai4nucleome-biomaster",
+          "name": "BioMaster",
+          "repo": "ai4nucleome/BioMaster",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 92,
+          "forks": 10
+        },
+        {
+          "id": "elliotxie-cassia",
+          "name": "CASSIA",
+          "repo": "ElliotXie/CASSIA",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 89,
+          "forks": 6
+        },
+        {
+          "id": "virtualpatientengine-aiagents4pharma",
+          "name": "AI Agents for Pharma",
+          "repo": "VirtualPatientEngine/AIAgents4Pharma",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 80,
+          "forks": 46
+        },
+        {
+          "id": "zjlrock777-awesome-llm-agents-scientific-discovery",
+          "name": "Awesome LLM Agents for Scientific Discovery",
+          "repo": "zjlrock777/Awesome-LLM-Agents-Scientific-Discovery",
+          "category": "benchmark-source",
+          "sections": [
+            "benchmark"
+          ],
+          "stars": 74,
+          "forks": 6
+        },
+        {
+          "id": "astrazeneca-cellatria",
+          "name": "cellatria",
+          "repo": "AstraZeneca/cellatria",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 64,
+          "forks": 21
+        },
+        {
+          "id": "keiji-ai-biodsa",
+          "name": "BioDSA",
+          "repo": "Keiji-AI/BioDSA",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 63,
+          "forks": 8
+        },
+        {
+          "id": "jpickard1-brad",
+          "name": "BRAD",
+          "repo": "Jpickard1/BRAD",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 59,
+          "forks": 5
+        },
+        {
+          "id": "mims-harvard-kgarevion",
+          "name": "KGARevion",
+          "repo": "mims-harvard/KGARevion",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 48,
+          "forks": 19
+        },
+        {
+          "id": "variomeanalytics-bioinformatics-agent-skills",
+          "name": "Bioinformatics Agent Skills",
+          "repo": "variomeanalytics/bioinformatics-agent-skills",
+          "category": "skill-library",
+          "sections": [
+            "ecosystem"
+          ],
+          "stars": 46,
+          "forks": 4
+        },
+        {
+          "id": "biagent-dev-bia",
+          "name": "BIA (BioInformatics Agent)",
+          "repo": "biagent-dev/bia",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 43,
+          "forks": 4
+        },
+        {
+          "id": "epistasislab-escargot",
+          "name": "ESCARGOT",
+          "repo": "EpistasisLab/ESCARGOT",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 35,
+          "forks": 7
+        },
+        {
+          "id": "webioinfo01-awesome-ai-meets-biology",
+          "name": "Awesome AI Meets Biology",
+          "repo": "Webioinfo01/Awesome-AI-Meets-Biology",
+          "category": "benchmark-source",
+          "sections": [
+            "benchmark"
+          ],
+          "stars": 30,
+          "forks": 2
+        },
+        {
+          "id": "bioagent-bench-bioagent-bench",
+          "name": "BioAgent Bench",
+          "repo": "bioagent-bench/bioagent-bench",
+          "category": "benchmark-source",
+          "sections": [
+            "benchmark"
+          ],
+          "stars": 24,
+          "forks": 0
+        },
+        {
+          "id": "westlake-autolab-biokgbench",
+          "name": "BioKGBench",
+          "repo": "westlake-autolab/BioKGBench",
+          "category": "benchmark-source",
+          "sections": [
+            "benchmark"
+          ],
+          "stars": 24,
+          "forks": 1
+        },
+        {
+          "id": "holobiomicslab-mimosa-ai",
+          "name": "Mimosa-AI",
+          "repo": "HolobiomicsLab/Mimosa-AI",
+          "category": "watchlist",
+          "sections": [
+            "watch"
+          ],
+          "stars": 21,
+          "forks": 6
+        },
+        {
+          "id": "bgiresearch-biomics",
+          "name": "BiOmics",
+          "repo": "BGIResearch/BiOmics",
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": 16,
+          "forks": 2
+        },
+        {
+          "id": "plobb-celltype-agent",
+          "name": "celltype-agent",
+          "repo": "plobb/celltype-agent",
+          "category": "watchlist",
+          "sections": [
+            "watch"
+          ],
+          "stars": 11,
+          "forks": 1
+        },
+        {
+          "id": "donbr-lifesciences-research",
+          "name": "Life Sciences Research MCP",
+          "repo": "donbr/lifesciences-research",
+          "category": "skill-library",
+          "sections": [
+            "ecosystem"
+          ],
+          "stars": 6,
+          "forks": 2
+        },
+        {
+          "id": "davidfischerlab-kai",
+          "name": "kai",
+          "repo": "davidfischerlab/kai",
+          "category": "watchlist",
+          "sections": [
+            "watch"
+          ],
+          "stars": 5,
+          "forks": 1
+        },
+        {
+          "id": "cellagent",
+          "name": "CellAgent",
+          "repo": null,
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": null,
+          "forks": null
+        },
+        {
+          "id": "stella",
+          "name": "STELLA",
+          "repo": null,
+          "category": "direct-agent",
+          "sections": [
+            "core"
+          ],
+          "stars": null,
+          "forks": null
+        }
+      ]
+    }
+  ]
+}
