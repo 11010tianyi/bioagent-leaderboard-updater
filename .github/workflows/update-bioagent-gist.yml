@@ -88,7 +88,7 @@ jobs:
           git add bioagent-leaderboard.ts bioagent-leaderboard.md bioagent-leaderboard.zh-CN.md latest.json history.json snapshots
           git commit -m "Update bioagent leaderboard for $(date +%F)"
           git remote set-url origin "https://x-access-token:${GIST_TOKEN}@gist.github.com/${GIST_ID}.git"
-          git push origin HEAD:master
+          git push origin HEAD:"$(git branch --show-current)"
 
       - uses: actions/upload-pages-artifact@v3
         with:
