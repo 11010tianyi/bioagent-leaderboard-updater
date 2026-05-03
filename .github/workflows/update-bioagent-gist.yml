@@ -1,0 +1,64 @@
+name: Update bioagent leaderboard gist
+
+on:
+  schedule:
+    - cron: "20 9 * * *"
+      timezone: "Asia/Shanghai"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Validate required secrets
+        run: |
+          test -n "${GIST_ID}" || (echo "Missing GIST_ID secret" && exit 1)
+          test -n "${GIST_TOKEN}" || (echo "Missing GIST_TOKEN secret" && exit 1)
+        env:
+          GIST_ID: ${{ secrets.GIST_ID }}
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+
+      - name: Clone leaderboard gist
+        env:
+          GIST_ID: ${{ secrets.GIST_ID }}
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+        run: |
+          git clone "https://x-access-token:${GIST_TOKEN}@gist.github.com/${GIST_ID}.git" gist
+
+      - name: Copy generator into gist
+        run: |
+          cp bioagent-leaderboard.ts gist/bioagent-leaderboard.ts
+
+      - name: Generate leaderboard markdown
+        working-directory: gist
+        env:
+          TZ: Asia/Shanghai
+          GITHUB_TOKEN: ${{ secrets.GIST_TOKEN }}
+        run: |
+          bun ./bioagent-leaderboard.ts --output bioagent-leaderboard.md --zh-output bioagent-leaderboard.zh-CN.md
+
+      - name: Commit and push changes
+        working-directory: gist
+        env:
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID }}
+        run: |
+          if git diff --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add bioagent-leaderboard.ts bioagent-leaderboard.md bioagent-leaderboard.zh-CN.md
+          git commit -m "Update bioagent leaderboard for $(date +%F)"
+          git remote set-url origin "https://x-access-token:${GIST_TOKEN}@gist.github.com/${GIST_ID}.git"
+          git push origin HEAD:master
